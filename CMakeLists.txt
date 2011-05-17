@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-project(Qt-OpenGL-Demo)
+project(OpenGL-Lab3)
 
 #Version Information
 set(${PROJECT_NAME}_MAJOR_VERSION 1)
@@ -18,7 +18,8 @@ include_directories(GLWidget QtLogic)
 
 #Separeted graphics and interface logic into libs
 add_subdirectory(GLWidget)
-add_subdirectory(QtLogic)
+#add_subdirectory(QtLogic)
 
+#compile time stuff
 add_executable(Demo main.cpp)
-target_link_libraries(Demo ${QT_LIBRARIES} GLWidgetLib QtLogicLib)
+target_link_libraries(Demo ${QT_LIBRARIES} GLWidgetLib)# QtLogicLib)
